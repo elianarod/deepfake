@@ -1,0 +1,270 @@
+<!-- Ana Isabel Teixeira, Eliana Rodrigues, Inês Canha, Pedro Dias
+FBAUP, DM, 2021 -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Deepfake</title>
+    <link rel="icon" type="image/x-icon" href="icon.ico">
+  </head>
+  <body>
+    <main>
+      <!-- CHAT -->
+       <section id="left">
+      <section id="chat_box" class="draggable"> 
+        <header>
+          <div class="headerdecor_left">
+            <hr />
+            <hr />
+            <hr />
+            <hr />
+            <hr />
+          </div>
+          <h1>Chat</h1>
+          <div class="headerdecor_right">
+            <hr />
+            <hr />
+            <hr />
+            <hr />
+            <hr />
+          </div>
+          <button id="x-btn">X</button>
+        </header>
+        <!-- Enviar para o getform -->
+        <form
+          action="https://getform.io/f/ca90f043-2e83-4116-a812-26d64f033400"
+          method="POST"
+          enctype="multipart/form-data"
+          id="myForm"
+        >
+          <div class="group">
+            <p></p>
+            <input
+              type="text"
+              name="name"
+              id="nome"
+              placeholder="_"
+              spellcheck="false"
+              required
+              autofocus
+            />
+          </div>
+          <div class="group">
+            <p></p>
+            <input
+              type="text"
+              name="question2"
+              placeholder="_"
+              spellcheck="false"
+            />
+          </div>
+          <div class="group">
+            <p></p>
+            <!--Y/N-->
+            <input
+              type="text"
+              name="question3"
+              placeholder="_"
+              spellcheck="false"
+              required
+            />
+          </div>
+          <div class="group">
+            <p></p>
+            <input
+              type="text"
+              name="question4"
+              placeholder="_"
+              spellcheck="false"
+            />
+          </div>
+          <div class="group">
+            <p></p>
+            <!--Y/N-->
+            <input
+              type="text"
+              name="question5"
+              placeholder="_"
+              spellcheck="false"
+              required
+            />
+          </div>
+          <div class="group">
+            <p></p>
+            <input
+              type="text"
+              name="question6"
+              placeholder="_"
+              spellcheck="false"
+              required
+            />
+          </div>
+          <div class="group">
+            <p></p>
+            <!--Blue, Yellow, Red-->
+            <input
+              type="text"
+              name="question7"
+              placeholder="_"
+              spellcheck="false"
+            />
+          </div>
+          <div class="group">
+            <p></p>
+            <input
+              type="text"
+              name="question8"
+              placeholder="_"
+              spellcheck="false"
+            />
+          </div>
+          <div class="group">
+            <p></p>
+            <input
+              type="email"
+              name="email"
+              placeholder="_"
+              spellcheck="false"
+              required
+            />
+          </div>
+          <div class="group">
+            <p></p>
+            <button>
+              <label for="file" class="custom-file-upload">Upload Picture</label>
+            </button>
+            <input
+              type="file"
+              name="file"
+              id="file"
+              accept="image/png, image/jpeg"
+              required
+            />
+          </div>
+          <button id="submit" type="submit">Submit Answers</button>
+        </form>
+      </section>
+    </section>
+
+      <!-- YOUR FRIEND -->
+      <aside>
+        <section id="friend_box" class="draggable">
+          <header>
+            <div class="headerdecor_left">
+              <hr />
+              <hr />
+              <hr />
+              <hr />
+              <hr />
+            </div>
+            <h2>Your Friend</h2>
+            <div class="headerdecor_right">
+              <hr />
+              <hr />
+              <hr />
+              <hr />
+              <hr />
+            </div>
+            <button id="x-btn2">X</button>
+            
+          </header>
+          <main>
+            
+          <!-- AVATAR -->
+          <img id="avatar" src="" alt="avatar" />
+
+          <section>
+            <p>Name: João Paulo Almeida e Bettencourt, "O Mantorras VI"</p>
+            <hr />
+            <div class="thirdwidth">
+              <p>Age: 20094</p>
+              <p>Gender: Bitchboy</p>
+              <p>Nationality: LV</p>
+            </div>
+            <hr />
+            <div class="thirdwidth">
+              <p>Status: Alive</p>
+              <p>LV: 99999999+</p>
+              <p>Weapon: Knife</p>
+            </div>
+            <hr>
+            <p>Hobbies: Dog Shows, #%#&/%&!!!Beach Volleyball%#&</p>
+          </main>
+        </section>
+      </section>
+
+        <!-- WEBCAM -->
+        <section id="you_box" class="draggable">
+          <header>
+            <div class="headerdecor_left">
+              <hr />
+              <hr />
+              <hr />
+              <hr />
+              <hr />
+            </div>
+            <h2>You <3</h2>
+            <div class="headerdecor_right">
+              <hr />
+              <hr />
+              <hr />
+              <hr />
+              <hr />
+            </div>
+            <button id="x-btn3">X</button>
+          </header>
+          <main>
+            <section>
+              <video id="video" autoplay></video>
+              <canvas id="canvas" width="1280" height="960"></canvas>
+            </section>
+            <section>
+              <button id="start-camera">Turn on</button>
+              <button id="click-photo">Capture</button>
+              <!-- <button id="save">Save</button> -->
+              <button><a href="#" class="download" id="btn-download" download="image.png">Save</a></button>
+              <button id="instructions">What?</button>
+              </main>
+            </section>
+          </aside>
+              </section>
+      <!-- BACKGROUND VÍDEOS -->
+<video autoplay loop muted id="myVideo" src="" type="video/mp4">
+  <!-- <source src="" id ="randVid" type="video/mp4"> -->
+</video>
+</main>
+<!-- POP UPS -->
+<div class="pop-parent">
+   <!-- Pop up instruções -->
+   <aside id="what" class="draggable">
+    <header></header>
+    <p>Our objective is to gather several portraits as to create a deepfake montage. To contribute, please turn on your camera and capture a picture of your face with clear lighting. Don't forget to save and upload it!<br><strong>Pro tip:</strong> Upload your own picture with better quality for better results!</p>        
+    </aside>
+  <!-- Pop up X 3-->
+<aside id="close3" class="draggable">
+  <header></header>
+  <p>You can't close this window.</p>        
+  </aside>
+     <!-- Pop up X 2-->
+<aside id="close2" class="draggable">
+<header></header>
+<p>You can't close this window.</p>        
+</aside>
+<!-- Pop up X -->
+<aside id="close" class="draggable">
+<header></header>
+<p>You can't close this window.</p>        
+</aside>
+</div>
+<script src="js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="js/jquery.coolType.js"></script>
+<script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+<script src="js/main.js"></script>
+<!-- MENSAGEM DE AVISO MOBILE -->
+<p id="aviso">Open this website on your computer.</p>
+  </body>
+</html>

@@ -1,0 +1,497 @@
+/*FONT*/
+
+@font-face {
+  src: url("../fonts/Mister\ Pixel\ Regular.otf");
+  font-family: "Mister Pixel Regular";
+  font-style: normal;
+}
+
+/*QUICK CSS RESET*/
+
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+  overflow: hidden;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul,
+hr {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* CSS START */
+
+body {
+  width: 100vw;
+  height: 100vh;
+  padding-top: 2%;
+  background-color: white;
+  font-family: "Mister Pixel Regular", sans-serif;
+}
+
+section {
+  background-color: gray;
+  border: 4px solid lightgray;
+  box-shadow: 1px 1px black;
+}
+
+main {
+  display: flex;
+  margin-left: 10%;
+  margin-right: 10%;
+  width: 80%;
+  height: 90%;
+}
+
+header {
+  background-color: lightgray;
+  height: 2.5em;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 12px;
+  color: white;
+  text-shadow: 1px 1px black;
+  position: relative;
+  cursor: grab;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.headerdecor_left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40%;
+}
+
+.headerdecor_right {
+  position: absolute;
+  top: 0;
+  left: 60%;
+  width: 29%;
+}
+
+header hr {
+  margin-bottom: 3px;
+  border-top: 1px solid white;
+  border-bottom: 1px solid rgb(43, 43, 43);
+}
+
+button {
+  background-color: lightgray;
+  color: white;
+  border: 0;
+  text-shadow: 1px 1px black;
+  border-top: 1px solid white;
+  border-left: 1px solid white;
+  box-shadow: 1px 1px black;
+  font-family: "Mister Pixel Regular", sans-serif;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+header button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 10%;
+  height: 1.3em;
+  font-size: 20px;
+  text-align: center;
+}
+
+header button:active,
+button:active,
+.custom-file-upload:active {
+  color: gray;
+  border-right: 1px solid white;
+  border-bottom: 1px solid white;
+  border-left: 1px solid gray;
+  border-top: 1px solid gray;
+}
+
+#chat_box {
+  width: 100%;
+  height: 100%;
+  margin-right: 10%;
+  background-color: rgb(58, 58, 58);
+  position: absolute;
+  overflow-y: scroll;
+}
+
+#chat_box h1 {
+  font-size: 1.6em;
+}
+
+#left {
+  position: relative;
+  width: 55%;
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+form {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 13px;
+  padding: 2em;
+  color: white;
+  line-height: 1.5em;
+}
+
+input {
+  background-color: rgb(58, 58, 58);
+  border: 0;
+  width: 100%;
+  color: white;
+  font-family: "Courier New", Courier, monospace;
+}
+
+input:focus {
+  outline: none;
+}
+
+input::placeholder {
+  color: white;
+  animation: blink 1s linear infinite alternate;
+}
+
+/* isto não está a funcionar */
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+aside {
+  width: 45%;
+  height: 100%;
+  position: relative;
+}
+
+#friend_box {
+  position: absolute;
+  top: 0;
+  right: 0;
+  max-width: 22em;
+  width: 65%; /*65*/
+  padding: 0;
+}
+
+#friend_box .headerdecor_left {
+  width: 25%;
+}
+
+#friend_box .headerdecor_right {
+  left: 75%;
+  width: 13%;
+}
+
+#friend_box main {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+#friend_box img {
+  background-color: white;
+  border-bottom: 4px solid lightgray;
+  margin: 0;
+  width: 100%;
+}
+
+#friend_box main hr {
+  margin: 0;
+  height: 2px;
+  border-top: 1px solid white;
+  border-bottom: 1px solid black;
+}
+
+#friend_box section {
+  border: 1px solid white;
+  box-shadow: 1px 1px black;
+  margin: 0;
+  height: 30%;
+}
+
+#friend_box p {
+  line-height: 1.4;
+  text-indent: 2px;
+  font-size: 12px;
+  color: whitesmoke;
+  text-shadow: 1px 1px black;
+  cursor: default;
+}
+
+.thirdwidth {
+  display: flex;
+  flex-direction: row;
+}
+
+.thirdwidth p {
+  width: 30%;
+}
+
+.thirdwidth p:not(:first-child) {
+  border-left: 1px solid black;
+}
+
+.thirdwidth p:not(:last-child) {
+  border-right: 1px solid white;
+}
+
+canvas {
+  background-color: transparent;
+  /* object-fit: cover; */
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  top: 0em;
+  z-index: 99;
+}
+
+video {
+  background-color: black;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+#you_box {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 80%;
+  height: 40%;
+  margin-top: 5%;
+  box-shadow: 1px 1px black;
+}
+
+#you_box .headerdecor_left {
+  width: 37%;
+}
+
+#you_box .headerdecor_right {
+  left: 63%;
+  width: 25%;
+}
+
+#you_box main {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+#you_box main section {
+  box-shadow: 0px 0px;
+}
+
+/* lado esquerdo you */
+#you_box section:first-child {
+  background-color: rgb(58, 58, 58);
+  border: 0;
+  border-right: 4px solid lightgray;
+  width: 75%;
+  height: 88%;
+  position: relative;
+}
+
+/* lado direito you */
+#you_box section:not(:first-child) {
+  width: 33%;
+  height: 88%;
+  border-bottom: 1px solid white;
+  border-right: 1px solid white;
+  border-left: 1px solid white;
+  border-top: 1px solid white;
+  box-shadow: 1px 1px black;
+  text-align: center;
+  position: relative;
+}
+
+/* Turn on, capture, what? */
+#you_box section button {
+  width: 80%;
+  max-width: 5.5em;
+  margin-top: 0.5em;
+  font-size: 20px;
+}
+/* 
+#what_button {
+  position: relative;
+}
+
+#what_button button {
+  cursor: default;
+} */
+
+.pop-parent {
+  display: block;
+  position: absolute;
+  width: 9.7%;
+  height: 100%;
+}
+
+#what {
+  display: block;
+  z-index: 99;
+  position: absolute;
+  top: -26%;
+  right: -920%;
+  width: 100%;
+  height: auto;
+  background-color: rgb(255, 255, 173);
+  font-family: "Courier New", Courier, monospace;
+  font-size: 11px;
+  text-align: left;
+  border-left: 1px solid white;
+  border-top: 1px solid white;
+  box-shadow: 1px 1px black;
+  cursor: default;
+}
+
+#close {
+  display: block;
+  z-index: 10;
+  position: absolute;
+  top: -85.7%;
+  right: -540%;
+  width: 100%;
+  height: auto;
+  background-color: rgb(255, 255, 173);
+  font-family: "Courier New", Courier, monospace;
+  font-size: 11px;
+  text-align: left;
+  border-left: 1px solid white;
+  border-top: 1px solid white;
+  box-shadow: 1px 1px black;
+  cursor: default;
+  z-index: 100;
+}
+
+#close2 {
+  display: block;
+  z-index: 10;
+  position: absolute;
+  top: -85.7%;
+  right: -920%;
+  width: 100%;
+  height: auto;
+  background-color: rgb(255, 255, 173);
+  font-family: "Courier New", Courier, monospace;
+  font-size: 11px;
+  text-align: left;
+  border-left: 1px solid white;
+  border-top: 1px solid white;
+  box-shadow: 1px 1px black;
+  cursor: default;
+}
+
+#close3 {
+  display: block;
+  z-index: 10;
+  position: absolute;
+  top: -34%;
+  right: -920%;
+  width: 100%;
+  height: auto;
+  background-color: rgb(255, 255, 173);
+  font-family: "Courier New", Courier, monospace;
+  font-size: 11px;
+  text-align: left;
+  border-left: 1px solid white;
+  border-top: 1px solid white;
+  box-shadow: 1px 1px black;
+  cursor: default;
+}
+
+#close header,
+#close2 header,
+#close3 header,
+#what header {
+  background-color: rgb(230, 230, 152);
+  height: 10px;
+}
+
+#what p,
+#close p,
+#close2 p,
+#close3 p {
+  margin: 1.2em;
+}
+
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+}
+
+#aviso {
+  display: none;
+}
+
+/* MEDIA QUERIES */
+@media only screen and (max-width: 768px) {
+  /* Mobile */
+  main {
+    display: none;
+  }
+
+  #aviso {
+    display: block;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    padding: 0.5em;
+    font-size: 40px;
+  }
+}
